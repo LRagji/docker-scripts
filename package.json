@@ -1,0 +1,26 @@
+{
+    "name": "global_scripts",
+    "version": "0.0.1",
+    "description": "This file only represents commands/scripts not any package",
+    "main": "index.js",
+    "scripts": {
+        "pg13": "docker run --name pg13 -p 5432:5432 -v D:\\Git\\docker-scripts\\pg\\database:/var/lib/postgresql/data -e POSTGRES_PASSWORD=postgres -itd --rm postgres",
+        "redis": "docker run --name redis  -itd --rm redis:latest",
+        "rediscli": "docker exec -it redis redis-cli",
+        "pgadmin": "docker run --name pgadmin -p 80:80 -v D:\\Git\\docker-scripts\\pgadmin:/var/lib/pgadmin -e PGADMIN_DEFAULT_EMAIL=postgres@local.com -e PGADMIN_DEFAULT_PASSWORD=postgres --rm -itd dpage/pgadmin4"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LRagji/level-matrix.git"
+    },
+    "keywords": [],
+    "author": "Laukik",
+    "license": "SEE LICENSE IN license.md",
+    "bugs": {
+        "url": "https://github.com/LRagji/level-matrix/issues"
+    },
+    "homepage": "https://github.com/LRagji/level-matrix#readme",
+    "devDependencies": {},
+    "peerDependencies": {},
+    "dependencies": {}
+}
