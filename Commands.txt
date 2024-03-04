@@ -1,0 +1,5 @@
+Commnds: 
+docker create --name="tmp_$$" image:tags  <--- creates FS without running
+docker export tmp_$$ | tar t  <---- Lists FS
+docker cp tmp_$$:/app ./hello <---- dumps folder out to host
+docker rm tmp_$$ <--- deletes the FS created.
